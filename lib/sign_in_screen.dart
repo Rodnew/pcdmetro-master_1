@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:pcdmetro/HomeEstacao.dart';
+import 'package:pcdmetro/selecionaEstacao.dart';
 import 'package:pcdmetro/sign_up_screen.dart';
 import 'package:pcdmetro/src/custom_text_field.dart';
 
@@ -104,7 +105,7 @@ class SignInScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context)
                             .pushReplacement(MaterialPageRoute(builder: (c) {
-                          return HomeEstacao();
+                          return SelecionaEstacao();
                         }));
                       },
                       child: const Text(
