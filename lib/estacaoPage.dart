@@ -33,11 +33,30 @@ class _EstacaoPageState extends State<EstacaoPage> {
             ),
           ),
           body: TabBarView(
-            children: [
-              HomeEstacao(),
-              Container(),
-            ],
+            children: [HomeEstacao(), desembarques()],
           )),
     );
+  }
+
+  Widget desembarques() {
+    final quantidade = widget.estacao.desembarques.length;
+
+    return quantidade == 0
+        ? Container(
+            child: Center(
+              child: Text('Aguardando informação de desembarque'),
+            ),
+          )
+        : ListView.separated(
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                leading: Icon(Icons.wheelchair_pickup),
+                title: Text(widget.estacao.desembarques[index].origem),
+                trailing: Text(widget.estacao.desembarques[index].trem),
+              );
+            },
+            separatorBuilder: (_, __) => Divider(),
+            itemCount: quantidade,
+          );
   }
 }

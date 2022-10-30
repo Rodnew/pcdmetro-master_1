@@ -45,7 +45,7 @@ class _HomeEstacaoState extends State<HomeEstacao> {
                 ),*/
               ),
             ),
-            SizedBox(
+            /*SizedBox(
               //Box de Sentido1
               width: 500,
               child: Padding(
@@ -115,7 +115,7 @@ class _HomeEstacaoState extends State<HomeEstacao> {
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                               Color.fromARGB(255, 74, 159, 0))))),
-            ),
+            ),*/
             InkWell(
               child: Container(
                 //Box Cadeirante Motorizada
